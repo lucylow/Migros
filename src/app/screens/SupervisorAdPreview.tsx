@@ -1,5 +1,5 @@
 import { MobileFrame } from '../components/MobileFrame';
-import { ArrowLeft, Sparkles, Smartphone, Monitor, Image as ImageIcon, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Sparkles, Smartphone, Monitor, Image as ImageIcon, TrendingUp, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
 import { useState, useEffect } from 'react';
@@ -106,6 +106,33 @@ export function SupervisorAdPreview() {
                   <span className="text-sm text-green-900 font-medium">4 Varianten erfolgreich erstellt</span>
                 </div>
               </div>
+            </div>
+
+            {/* Video Ad Option */}
+            <div className="px-6">
+              <Link to="/supervisor-ad-video">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                  className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-4 text-white shadow-lg hover:shadow-xl transition-all"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div className="font-medium mb-1">KI-Video Ad generieren</div>
+                        <div className="text-xs text-blue-100">4s cinematic commercial mit AI-Agenten</div>
+                      </div>
+                    </div>
+                    <ArrowRight className="w-6 h-6" />
+                  </div>
+                </motion.div>
+              </Link>
             </div>
 
             {/* Ad variants */}

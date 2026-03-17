@@ -22,6 +22,7 @@ import { SupervisorAdPreview } from "./screens/SupervisorAdPreview";
 import { SupervisorAdDetail } from "./screens/SupervisorAdDetail";
 import { SupervisorAdPublish } from "./screens/SupervisorAdPublish";
 import { SupervisorAdAnalytics } from "./screens/SupervisorAdAnalytics";
+import { SupervisorAdVideo } from "./screens/SupervisorAdVideo";
 import { RootLayout } from "./components/RootLayout";
 
 export const router = createBrowserRouter([
@@ -120,6 +121,10 @@ export const router = createBrowserRouter([
       {
         path: "supervisor-ad-analytics",
         Component: SupervisorAdAnalytics,
+      },
+      {
+        path: "supervisor-ad-video",
+        Component: SupervisorAdVideo,
       },
     ],
   },

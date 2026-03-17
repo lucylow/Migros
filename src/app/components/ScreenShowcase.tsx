@@ -9,7 +9,13 @@ import {
   Camera, 
   BarChart3, 
   FileCheck,
-  ArrowLeft
+  ArrowLeft,
+  Megaphone,
+  FileText,
+  Eye,
+  Video,
+  Send,
+  TrendingUp
 } from 'lucide-react';
 
 export function ScreenShowcase() {
@@ -30,6 +36,16 @@ export function ScreenShowcase() {
   const supervisorScreens = [
     { path: '/supervisor-dashboard', name: 'Dashboard', icon: BarChart3, color: 'gray' },
     { path: '/supervisor-review', name: 'Review Bundle', icon: FileCheck, color: 'gray' },
+  ];
+
+  const adGeneratorScreens = [
+    { path: '/supervisor-ad-home', name: 'Ad Home', icon: Megaphone, color: 'orange' },
+    { path: '/supervisor-ad-brief', name: 'Ad Brief', icon: FileText, color: 'orange' },
+    { path: '/supervisor-ad-preview', name: 'Ad Preview', icon: Eye, color: 'orange' },
+    { path: '/supervisor-ad-detail', name: 'Ad Detail', icon: Eye, color: 'orange' },
+    { path: '/supervisor-ad-video', name: 'Video Ad', icon: Video, color: 'orange' },
+    { path: '/supervisor-ad-publish', name: 'Publish', icon: Send, color: 'orange' },
+    { path: '/supervisor-ad-analytics', name: 'Analytics', icon: TrendingUp, color: 'orange' },
   ];
 
   const colorClasses = {
@@ -85,6 +101,25 @@ export function ScreenShowcase() {
                 >
                   <screen.icon className="w-8 h-8 mx-auto mb-3" />
                   <div className="text-sm text-gray-800">{screen.name}</div>
+                </motion.div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Ad Generator Screens */}
+        <div className="mt-12">
+          <h2 className="text-2xl mb-6 text-[#FF6600]">GenAI Ad Creator (Supervisor Tool)</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {adGeneratorScreens.map((screen) => (
+              <Link key={screen.path} to={screen.path}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`${colorClasses[screen.color as keyof typeof colorClasses]} border-2 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow`}
+                >
+                  <screen.icon className="w-8 h-8 mx-auto mb-3" />
+                  <div className="text-sm">{screen.name}</div>
                 </motion.div>
               </Link>
             ))}

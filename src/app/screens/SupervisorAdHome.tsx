@@ -1,5 +1,5 @@
 import { MobileFrame } from '../components/MobileFrame';
-import { TrendingUp, AlertTriangle, Target, Plus, Home, BarChart3, User } from 'lucide-react';
+import { TrendingUp, AlertTriangle, Target, Plus, Home, BarChart3, User, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
 
@@ -17,6 +17,11 @@ export function SupervisorAdHome() {
         <div className="bg-white border-b border-gray-200 px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
+              <Link to="/supervisor-dashboard">
+                <button className="p-1 hover:bg-gray-100 rounded-full transition-colors">
+                  <ArrowLeft className="w-6 h-6 text-gray-700" />
+                </button>
+              </Link>
               <div className="w-10 h-10 bg-[#FF6600] rounded-xl flex items-center justify-center">
                 <span className="text-white font-bold text-lg">M</span>
               </div>

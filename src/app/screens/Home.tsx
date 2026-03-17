@@ -1,5 +1,5 @@
 import { MobileFrame } from '../components/MobileFrame';
-import { Search, Mic, Scan, List, ShoppingBag, Tag, User, MapPin, Sparkles } from 'lucide-react';
+import { Search, Mic, Scan, List, ShoppingBag, Tag, User, MapPin, Sparkles, Lock } from 'lucide-react';
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
 import { BottomNav } from '../components/BottomNav';
@@ -162,6 +162,36 @@ export function Home() {
               ))}
             </div>
           </div>
+
+          {/* Demo Access: Supervisor Dashboard */}
+          <Link to="/supervisor-dashboard">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="bg-gradient-to-r from-gray-700 to-gray-800 text-white rounded-2xl p-5 border-2 border-gray-600 shadow-md"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div className="bg-white/20 rounded-xl p-2">
+                  <Lock className="w-5 h-5 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-sm font-medium">Demo: Supervisor Mode</h3>
+                  <p className="text-xs text-gray-300">Explore store management & AI ads</p>
+                </div>
+                <div className="bg-white/20 rounded-full px-3 py-1 text-xs">
+                  Try →
+                </div>
+              </div>
+              <div className="flex gap-2 text-xs text-gray-300">
+                <span>📊 Analytics</span>
+                <span>•</span>
+                <span>🎬 Ad Generator</span>
+                <span>•</span>
+                <span>✅ Approvals</span>
+              </div>
+            </motion.div>
+          </Link>
         </div>
 
         {/* Bottom nav */}

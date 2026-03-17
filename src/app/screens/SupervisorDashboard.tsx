@@ -1,5 +1,5 @@
 import { MobileFrame } from '../components/MobileFrame';
-import { TrendingUp, TrendingDown, Package, DollarSign, AlertCircle, CheckCircle, Clock } from 'lucide-react';
+import { TrendingUp, TrendingDown, Package, DollarSign, AlertCircle, CheckCircle, Clock, Megaphone } from 'lucide-react';
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
 
@@ -145,6 +145,47 @@ export function SupervisorDashboard() {
               <span>Now</span>
             </div>
           </motion.div>
+
+          {/* AI Ad Generator Feature */}
+          <Link to="/supervisor-ad-home">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.55 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-gradient-to-br from-[#FF6600] to-[#FF8533] rounded-2xl p-6 shadow-lg text-white relative overflow-hidden"
+            >
+              {/* Background decoration */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16" />
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12" />
+              
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-white/20 rounded-xl p-2">
+                    <Megaphone className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-medium">KI Ad Generator</h3>
+                    <p className="text-xs text-orange-100">Erstellen Sie Marketing-Kampagnen</p>
+                  </div>
+                  <div className="bg-white/20 rounded-full px-3 py-1 text-xs font-medium">
+                    Neu
+                  </div>
+                </div>
+                
+                <p className="text-sm text-orange-50 mb-4">
+                  Generieren Sie KI-gestützte Video-Ads basierend auf Inventar, Preisen und Kundenverhalten
+                </p>
+                
+                <div className="flex gap-2 text-xs text-orange-50">
+                  <div className="bg-white/20 rounded-full px-3 py-1.5">✨ Text-zu-Video</div>
+                  <div className="bg-white/20 rounded-full px-3 py-1.5">🎯 Stock-Aware</div>
+                  <div className="bg-white/20 rounded-full px-3 py-1.5">🌍 DE/FR/IT/EN</div>
+                </div>
+              </div>
+            </motion.div>
+          </Link>
 
           {/* Flagged for review */}
           <div>
