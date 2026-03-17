@@ -1,7 +1,7 @@
 
-  # Mobile mockups for features
+  # Zurich- Dynamic Vector.  Migros
 
-  This is a code bundle for Mobile mockups for features. The original project is available at https://www.figma.com/design/EM3dQ95B5FhAuwEm3KmEfb/Mobile-mockups-for-features.
+  This is a code bundle for Zurich- Dynamic Vector.  Migros. The original project is available at https://www.figma.com/design/EM3dQ95B5FhAuwEm3KmEfb/Zurich--Dynamic-Vector.--Migros.
 
   ## Running the code
 

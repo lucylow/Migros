@@ -135,7 +135,7 @@ export function Documentation() {
               <div>
                 <h4 className="text-purple-900 mb-1">Real-Time Indexing</h4>
                 <p className="text-sm text-gray-700">
-                  Stock levels update vectors in <100ms for instant availability checks
+                  Stock levels update vectors in &lt;100ms for instant availability checks
                 </p>
               </div>
             </div>

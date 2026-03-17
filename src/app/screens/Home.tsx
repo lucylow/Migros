@@ -1,7 +1,8 @@
 import { MobileFrame } from '../components/MobileFrame';
-import { Search, Mic, Scan, List, ShoppingBag, Tag, Home as HomeIcon, Compass, ShoppingCart, Sparkles, User, MapPin } from 'lucide-react';
+import { Search, Mic, Scan, List, ShoppingBag, Tag, User, MapPin, Sparkles } from 'lucide-react';
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
+import { BottomNav } from '../components/BottomNav';
 
 export function Home() {
   const bundles = [
@@ -164,29 +165,7 @@ export function Home() {
         </div>
 
         {/* Bottom nav */}
-        <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-[390px] bg-white border-t border-gray-200 px-6 py-3 flex justify-around items-center">
-          <button className="flex flex-col items-center gap-1 text-orange-500">
-            <HomeIcon className="w-6 h-6" />
-            <span className="text-xs">Home</span>
-          </button>
-          <button className="flex flex-col items-center gap-1 text-gray-400">
-            <Compass className="w-6 h-6" />
-            <span className="text-xs">Browse</span>
-          </button>
-          <button className="flex flex-col items-center gap-1 text-gray-400">
-            <ShoppingCart className="w-6 h-6" />
-            <span className="text-xs">Cart</span>
-          </button>
-          <button className="flex flex-col items-center gap-1 text-gray-400 relative">
-            <div className="absolute -top-1 -right-1 w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-            <Sparkles className="w-6 h-6" />
-            <span className="text-xs">Vector</span>
-          </button>
-          <button className="flex flex-col items-center gap-1 text-gray-400">
-            <User className="w-6 h-6" />
-            <span className="text-xs">Profile</span>
-          </button>
-        </div>
+        <BottomNav />
       </div>
     </MobileFrame>
   );

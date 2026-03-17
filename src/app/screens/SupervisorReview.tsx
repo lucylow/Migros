@@ -118,7 +118,7 @@ export function SupervisorReview() {
               <li className="flex gap-2">
                 <div className="w-1 h-1 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
                 <span>
-                  <strong>Confidence:</strong> Bundle has 87% similarity to successful past orders, but quantity deviation triggered manual review threshold (>30%).
+                  <strong>Confidence:</strong> Bundle has 87% similarity to successful past orders, but quantity deviation triggered manual review threshold (&gt;30%).
                 </span>
               </li>
             </ul>
