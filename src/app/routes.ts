@@ -16,6 +16,12 @@ import { InStoreMode } from "./screens/InStoreMode";
 import { VisualSearch } from "./screens/VisualSearch";
 import { SupervisorDashboard } from "./screens/SupervisorDashboard";
 import { SupervisorReview } from "./screens/SupervisorReview";
+import { SupervisorAdHome } from "./screens/SupervisorAdHome";
+import { SupervisorAdBrief } from "./screens/SupervisorAdBrief";
+import { SupervisorAdPreview } from "./screens/SupervisorAdPreview";
+import { SupervisorAdDetail } from "./screens/SupervisorAdDetail";
+import { SupervisorAdPublish } from "./screens/SupervisorAdPublish";
+import { SupervisorAdAnalytics } from "./screens/SupervisorAdAnalytics";
 import { RootLayout } from "./components/RootLayout";
 
 export const router = createBrowserRouter([
@@ -90,6 +96,30 @@ export const router = createBrowserRouter([
       {
         path: "supervisor-review",
         Component: SupervisorReview,
+      },
+      {
+        path: "supervisor-ad-home",
+        Component: SupervisorAdHome,
+      },
+      {
+        path: "supervisor-ad-brief",
+        Component: SupervisorAdBrief,
+      },
+      {
+        path: "supervisor-ad-preview",
+        Component: SupervisorAdPreview,
+      },
+      {
+        path: "supervisor-ad-detail",
+        Component: SupervisorAdDetail,
+      },
+      {
+        path: "supervisor-ad-publish",
+        Component: SupervisorAdPublish,
+      },
+      {
+        path: "supervisor-ad-analytics",
+        Component: SupervisorAdAnalytics,
       },
     ],
   },

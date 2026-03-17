@@ -1,5 +1,5 @@
 import { MobileFrame } from '../components/MobileFrame';
-import { ShoppingBasket, Store, Zap, ArrowRight, Grid, Info } from 'lucide-react';
+import { ShoppingBasket, Store, Zap, ArrowRight, Grid, Info, Megaphone } from 'lucide-react';
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
 
@@ -101,6 +101,42 @@ export function AppSelector() {
                 <li className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-gray-400 rounded-full" />
                   <span>AI reasoning transparency</span>
+                </li>
+              </ul>
+            </motion.div>
+          </Link>
+
+          <Link to="/supervisor-ad-home">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.45 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-gradient-to-br from-[#FF6600] to-[#FF8533] rounded-3xl p-6 shadow-xl"
+            >
+              <div className="flex items-start gap-4 mb-4">
+                <div className="bg-white/20 rounded-2xl p-3">
+                  <Megaphone className="w-8 h-8 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-xl mb-1 text-white">GenAI Ad Creator</h2>
+                  <p className="text-orange-100 text-sm">Supervisor marketing tools</p>
+                </div>
+                <ArrowRight className="w-6 h-6 text-white/80" />
+              </div>
+              <ul className="space-y-2 text-sm text-orange-50">
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-white rounded-full" />
+                  <span>AI-powered ad generation</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-white rounded-full" />
+                  <span>Inventory-aware campaigns</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-white rounded-full" />
+                  <span>Multi-language support</span>
                 </li>
               </ul>
             </motion.div>
